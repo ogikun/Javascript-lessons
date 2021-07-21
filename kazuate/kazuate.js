@@ -16,7 +16,7 @@ let remain = 0;
 let ansNums = [];
 let match = 0;
 let touch = 0;
-let log = "";
+let log = "-";
 
 let fisherYatesShuffle = (arr) => {
   for (var i = arr.length - 1; i > 0; i--) {

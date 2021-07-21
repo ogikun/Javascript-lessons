@@ -1,0 +1,9 @@
+#game {
+  background-color: black;
+  color: white;
+  border: 10px solid gray;
+}
+
+input {
+  font-size: large;
+}

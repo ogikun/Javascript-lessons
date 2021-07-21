@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>kazuate</title>
+    <link rel="stylesheet" href="kazuate.css">
   </head>
   <body>
     <h3>指定された回数の宣言で答えの数字を当てるゲーム</h3>
@@ -17,7 +18,8 @@
       <input type="button" value="Hard" onclick="selectDifficulty('hard')">　
       <input type="button" value="VeryHard" onclick="selectDifficulty('veryHard')">
     </div>
-    <table>
+    <br>
+    <table id="game">
       <thead>
         <tr>
           <td id="infoArea">難易度：-　桁数：-　試行回数：-</td>
@@ -28,12 +30,15 @@
       </thead>
       <tbody id="outputArea">
         <tr>
-          <td>　</td>
+          <td></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td id="messageArea"></td>
+          <td>　</td>
+        </tr>
+        <tr>
+          <td id="messageArea">-</td>
         </tr>
         <tr>
           <td id="ansDisplay">-</td>
