@@ -18,14 +18,14 @@ let match = 0;
 let touch = 0;
 let log = "-";
 
-let fisherYatesShuffle = (arr) => {
+const fisherYatesShuffle = (arr) => {
   for (var i = arr.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
 
-let selectDifficulty = (argDifficulty) => {
+const selectDifficulty = (argDifficulty) => {
   switch (argDifficulty) {
     case "standard":
       difficulty.name = "Standard";
@@ -59,7 +59,7 @@ let selectDifficulty = (argDifficulty) => {
   }
 };
 
-let setAnswer = (argAnsNum) => {
+const setAnswer = (argAnsNum) => {
   ansNums.push(argAnsNum);
   ANS_DISPLAY.innerText = ansNums.join('');
   document.getElementById(`${argAnsNum}key`).disabled = true;
@@ -77,7 +77,7 @@ let setAnswer = (argAnsNum) => {
   }
 };
 
-let clearAnswer = () => {
+const clearAnswer = () => {
   ansNums = [];
   ANS_DISPLAY.innerText = "-";
   document.getElementById("enterKey").disabled = true;
@@ -86,7 +86,7 @@ let clearAnswer = () => {
   }
 };
 
-let enterAnswer = () => {
+const enterAnswer = () => {
   remain--;
   match = 0;
   touch = 0;
@@ -121,11 +121,11 @@ let enterAnswer = () => {
   }
 };
 
-let outputLog = (argAnsNums, argMatch, argTouch) => {
+const outputLog = (argAnsNums, argMatch, argTouch) => {
   log = log + `<tr><td> ${argAnsNums.join("")} - ${argMatch} - ${argTouch} </td></tr>`;
   OUTPUT_AREA.innerHTML = log;
 };
 
-let cheating = () => {
+const cheating = () => {
   alert(keyNums);
 };
