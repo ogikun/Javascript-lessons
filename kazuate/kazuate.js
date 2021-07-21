@@ -125,3 +125,7 @@ let outputLog = (argAnsNums, argMatch, argTouch) => {
   log = log + `<tr><td> ${argAnsNums.join("")} - ${argMatch} - ${argTouch} </td></tr>`;
   OUTPUT_AREA.innerHTML = log;
 };
+
+let cheating = () => {
+  alert(keyNums);
+};
